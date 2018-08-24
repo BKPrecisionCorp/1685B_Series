@@ -1,4 +1,4 @@
-#   8500MostlyJustTrigger.py
+#   168xB.py
 #
 #   Copyright {2017} {B&K Precision Corporation}
 
@@ -19,7 +19,7 @@ import time
 
 ser = serial.Serial()
 ser.baudrate = 9600
-ser.port = 'COM15'
+ser.port = 'COM8'
 ser.timeout = 5
 print(ser)
 ser.open()
