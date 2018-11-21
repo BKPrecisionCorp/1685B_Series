@@ -19,18 +19,18 @@ import time
 
 ser = serial.Serial()
 ser.baudrate = 9600
-ser.port = 'COM15'
-ser.timeout = 5
+ser.port = 'COM5'
+ser.timeout = 0.05
 print(ser)
 ser.open()
 print(ser.is_open)
-ser.write("VOLT220\r".encode())
+ser.write("VOLT120\r".encode())
 print("Wrote")
-resp = ser.read(2)
+resp = ser.read(20)
 print(resp)
 print("read")
 ser.write("GETS\r".encode())
-print(ser.read(8))
+print(ser.read(20))
 ser.write("GETD\r".encode())
-print(ser.read(9))
+print(ser.read(16))
 ser.close()
